@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gt430xfl05il"
-path="res://.godot/imported/golem.png-bcfe0f25b968551f17399e66e93c4c39.ctex"
+uid="uid://crdbt3x346uyn"
+path="res://.godot/imported/grass_worldlayer.png-332bcb9791c37daeb758dec9e5938f20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/golem.png"
-dest_files=["res://.godot/imported/golem.png-bcfe0f25b968551f17399e66e93c4c39.ctex"]
+source_file="res://sprites/tilemaps/grass_worldlayer.png"
+dest_files=["res://.godot/imported/grass_worldlayer.png-332bcb9791c37daeb758dec9e5938f20.ctex"]
 
 [params]
 
