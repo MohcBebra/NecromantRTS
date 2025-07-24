@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://buo5etgbsq878"]
+[gd_scene load_steps=8 format=3 uid="uid://buo5etgbsq878"]
 
-[ext_resource type="Texture2D" uid="uid://crdbt3x346uyn" path="res://sprites/tilemaps/grass_worldlayer.png" id="1_4wnht"]
-[ext_resource type="Texture2D" uid="uid://dp1ww2squ206i" path="res://sprites/tilemaps/grass.png" id="1_ri14v"]
+[ext_resource type="Texture2D" uid="uid://crdbt3x346uyn" path="res://sprites/tilemaps/grass_worldlayer.png" id="1_s5lql"]
+[ext_resource type="Texture2D" uid="uid://dp1ww2squ206i" path="res://sprites/tilemaps/grass.png" id="2_3h7tx"]
+[ext_resource type="Script" uid="uid://cdgdel1agc33n" path="res://scripts/tilemaps/world_layer.gd" id="2_jiaie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3yku"]
-texture = ExtResource("1_4wnht")
+texture = ExtResource("1_s5lql")
 texture_region_size = Vector2i(25, 25)
 0:0/0 = 0
 1:0/0 = 0
@@ -15,7 +16,7 @@ tile_size = Vector2i(25, 25)
 sources/0 = SubResource("TileSetAtlasSource_j3yku")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wnht"]
-texture = ExtResource("1_ri14v")
+texture = ExtResource("2_3h7tx")
 texture_region_size = Vector2i(25, 25)
 0:0/0 = 0
 1:0/0 = 0
@@ -37,9 +38,10 @@ texture_region_size = Vector2i(25, 25)
 tile_size = Vector2i(25, 25)
 sources/1 = SubResource("TileSetAtlasSource_4wnht")
 
-[node name="GrassWorldLayer" type="TileMapLayer"]
+[node name="WorldLayer" type="TileMapLayer"]
 tile_set = SubResource("TileSet_3kunl")
+script = ExtResource("2_jiaie")
 
-[node name="MidVisualLayer" type="TileMapLayer" parent="."]
+[node name="MidGrassLayer" type="TileMapLayer" parent="."]
 position = Vector2(-12.5, -12.5)
 tile_set = SubResource("TileSet_j3yku")
