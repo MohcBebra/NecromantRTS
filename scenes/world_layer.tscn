@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://buo5etgbsq878"]
+[gd_scene load_steps=14 format=3 uid="uid://buo5etgbsq878"]
 
 [ext_resource type="Texture2D" uid="uid://crdbt3x346uyn" path="res://sprites/tilemaps/grass_worldlayer.png" id="1_s5lql"]
 [ext_resource type="Script" uid="uid://cdgdel1agc33n" path="res://scripts/tilemaps/world_layer.gd" id="2_jiaie"]
 [ext_resource type="Texture2D" uid="uid://beoe714d7o3vg" path="res://sprites/tilemaps/h_grass.png" id="3_3h7tx"]
+[ext_resource type="Texture2D" uid="uid://baw8mlv7onvky" path="res://sprites/tilemaps/l_grass.png" id="3_dlfmh"]
 [ext_resource type="Texture2D" uid="uid://cebtpd6vel4lt" path="res://sprites/tilemaps/m_grass.png" id="4_jiaie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3yku"]
@@ -16,8 +17,8 @@ texture_region_size = Vector2i(25, 25)
 tile_size = Vector2i(25, 25)
 sources/0 = SubResource("TileSetAtlasSource_j3yku")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlfmh"]
-texture = ExtResource("4_jiaie")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3w3qm"]
+texture = ExtResource("3_dlfmh")
 texture_region_size = Vector2i(25, 25)
 0:0/0 = 0
 1:0/0 = 0
@@ -31,42 +32,99 @@ texture_region_size = Vector2i(25, 25)
 1:2/0 = 0
 2:2/0 = 0
 3:2/0 = 0
-0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
 
+[sub_resource type="TileSet" id="TileSet_jiaie"]
+tile_size = Vector2i(25, 25)
+sources/0 = SubResource("TileSetAtlasSource_3w3qm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlfmh"]
+texture = ExtResource("4_jiaie")
+texture_region_size = Vector2i(25, 25)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -8.33333, -12.5, -12.5, 4.16667, -12.5, 4.16667, 12.5, 0, 12.5, 0, -8.33333)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 12.5, -4.16667, 12.5, -4.16667, -12.5, 0, -12.5)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, 12.5, -8.33333, 12.5, -12.5, 0, -12.5)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -8.33333, 12.5, -8.33333, 12.5, -12.5, -12.5, -12.5)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, -12.5, 12.5, -8.33333, 0, -8.33333, 0, 12.5, -12.5, 12.5, -12.5, -8.33333, 0, -8.33333, 0, -12.5)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, -12.5, -8.33333, -12.5, -12.5, 0, -12.5)
+2:1/0 = 0
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, 12.5, 0, 12.5, 0, -8.33333, 12.5, -8.33333)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, 12.5, -4.16667, 12.5, -4.16667, -12.5, 0, -12.5, 0, -8.33333, 12.5, -8.33333)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, 12.5, -12.5, 12.5, -12.5, -8.33333, 12.5, -8.33333)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, 12.5, 0, 12.5, 0, -8.33333, -12.5, -8.33333)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -12.5, 0, 12.5, 4.16667, 12.5, 4.16667, -12.5)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, -12.5, 12.5, -8.33333, 0, -8.33333, 0, 12.5, -4.16667, 12.5, -4.16667, -8.33333, -4.16667, -12.5)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -12.5, -12.5, -8.33333, 0, -8.33333, 0, 12.5, 12.5, 12.5, 12.5, -8.33333, 0, -8.33333, 0, -12.5)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, 12.5, 4.16667, 12.5, 4.16667, -12.5, 0, -12.5, 0, -8.33333, -12.5, -8.33333)
+
 [sub_resource type="TileSet" id="TileSet_3h7tx"]
 tile_size = Vector2i(25, 25)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_dlfmh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jiaie"]
 texture = ExtResource("3_3h7tx")
 texture_region_size = Vector2i(25, 25)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -12.5, -12.5, -8.33333, 0, -8.33333, 0, 12.5, 4.16667, 12.5, 4.16667, -12.5)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 12.5, -4.16667, 12.5, -4.16667, -12.5, 0, -12.5)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, 12.5, -8.33333, 12.5, -12.5, 0, -12.5)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -8.33333, 12.5, -8.33333, 12.5, -12.5, -12.5, -12.5)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, -12.5, 12.5, -8.33333, 0, -8.33333, 0, 12.5, -12.5, 12.5, -12.5, -8.33333, 0, -8.33333, 0, -12.5)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, -12.5, -8.33333, -12.5, -12.5, 0, -12.5)
 2:1/0 = 0
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 12.5, 12.5, 12.5, 12.5, -8.33333, 0, -8.33333)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, 12.5, -8.33333, 12.5, 12.5, -4.16667, 12.5, -4.16667, -12.5, 0, -12.5)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, 12.5, -12.5, 12.5, -12.5, -8.33333, 12.5, -8.33333)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 12.5, -12.5, 12.5, -12.5, -8.33333, 0, -8.33333)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 12.5, 4.16667, 12.5, 4.16667, -12.5, 0, -12.5)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.5, -12.5, 12.5, -8.33333, 0, -8.33333, 0, 12.5, -4.16667, 12.5, -4.16667, -12.5)
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, -12.5, -12.5, -8.33333, 0, -8.33333, 0, 12.5, 12.5, 12.5, 12.5, -8.33333, 0, -8.33333, 0, -12.5)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8.33333, -12.5, -8.33333, -12.5, 12.5, 4.16667, 12.5, 4.16667, -12.5, 0, -12.5)
 
 [sub_resource type="TileSet" id="TileSet_j3yku"]
 tile_size = Vector2i(25, 25)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_jiaie")
 
 [node name="WorldLayer" type="TileMapLayer"]
-tile_map_data = PackedByteArray("AAD5//z/AAABAAAAAAD5//3/AAABAAAAAAD5//7/AAABAAAAAAD5////AAABAAAAAAD5/wAAAAABAAAAAAD5/wEAAAABAAAAAAD5/wIAAAABAAAAAAD5/wMAAAABAAAAAAD5/wQAAAABAAAAAAD6//z/AAABAAAAAAD6//3/AAABAAAAAAD6//7/AAABAAAAAAD6////AAABAAAAAAD6/wAAAAABAAAAAAD6/wEAAAABAAAAAAD6/wIAAAABAAAAAAD6/wMAAAABAAAAAAD6/wQAAAABAAAAAAD7//z/AAABAAAAAAD7//3/AAABAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAABAAAAAAD7/wQAAAABAAAAAAD8//z/AAABAAAAAAD8//3/AAABAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wMAAAABAAAAAAD8/wQAAAABAAAAAAD9//z/AAABAAAAAAD9//3/AAABAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wMAAAABAAAAAAD9/wQAAAABAAAAAAD+//z/AAABAAAAAAD+//3/AAABAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAABAAAAAAD+/wQAAAABAAAAAAD///z/AAABAAAAAAD///3/AAABAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAABAAAAAAD//wQAAAABAAAAAAAAAPz/AAABAAAAAAAAAP3/AAABAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAABAAAAAAAAAAQAAAABAAAAAAABAPz/AAABAAAAAAABAP3/AAABAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAABAAAAAAABAAQAAAABAAAAAAACAPz/AAABAAAAAAACAP3/AAABAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAABAAAAAAACAAQAAAABAAAAAAADAPz/AAABAAAAAAADAP3/AAABAAAAAAADAP7/AAABAAAAAAADAP//AAABAAAAAAADAAAAAAABAAAAAAADAAEAAAABAAAAAAADAAIAAAABAAAAAAADAAMAAAABAAAAAAADAAQAAAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAABAAAAAAAEAAEAAAABAAAAAAAEAAIAAAABAAAAAAAEAAMAAAABAAAAAAAEAAQAAAABAAAAAAAFAPz/AAABAAAAAAAFAP3/AAABAAAAAAAFAP7/AAABAAAAAAAFAP//AAABAAAAAAAFAAAAAAABAAAAAAAFAAEAAAABAAAAAAAFAAIAAAABAAAAAAAFAAMAAAABAAAAAAAFAAQAAAABAAAAAAD3//v/AAACAAAAAAD3//z/AAACAAAAAAD3//3/AAACAAAAAAD3//7/AAACAAAAAAD3////AAACAAAAAAD3/wAAAAACAAAAAAD3/wEAAAACAAAAAAD3/wIAAAACAAAAAAD3/wMAAAACAAAAAAD3/wQAAAACAAAAAAD3/wUAAAACAAAAAAD3/wYAAAACAAAAAAD4//v/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD4////AAACAAAAAAD4/wAAAAACAAAAAAD4/wEAAAACAAAAAAD4/wIAAAACAAAAAAD4/wMAAAACAAAAAAD4/wQAAAACAAAAAAD4/wUAAAACAAAAAAD4/wYAAAACAAAAAAD5//r/AAACAAAAAAD5//v/AAACAAAAAAD6//r/AAACAAAAAAD6//v/AAACAAAAAAD7//r/AAACAAAAAAD7//v/AAACAAAAAAD8//r/AAACAAAAAAD8//v/AAACAAAAAAD9//r/AAACAAAAAAD9//v/AAACAAAAAAD+//r/AAACAAAAAAD+//v/AAACAAAAAAD///r/AAACAAAAAAD///v/AAACAAAAAAAAAPr/AAACAAAAAAAAAPv/AAACAAAAAAABAPr/AAACAAAAAAABAPv/AAACAAAAAAACAPr/AAACAAAAAAACAPv/AAACAAAAAAADAPr/AAACAAAAAAADAPv/AAACAAAAAAAEAPr/AAACAAAAAAAEAPv/AAACAAAAAAAFAPr/AAACAAAAAAAFAPv/AAACAAAAAAAGAPr/AAACAAAAAAAGAPv/AAACAAAAAAAHAPr/AAACAAAAAAAHAPv/AAACAAAAAAAGAPz/AAACAAAAAAAGAP3/AAACAAAAAAAGAP7/AAACAAAAAAAGAP//AAACAAAAAAAGAAAAAAACAAAAAAAGAAEAAAACAAAAAAAGAAIAAAACAAAAAAAGAAMAAAACAAAAAAAGAAQAAAACAAAAAAAGAAUAAAACAAAAAAAGAAYAAAACAAAAAAAHAPz/AAACAAAAAAAHAP3/AAACAAAAAAAHAP7/AAACAAAAAAAHAP//AAACAAAAAAAHAAAAAAACAAAAAAAHAAEAAAACAAAAAAAHAAIAAAACAAAAAAAHAAMAAAACAAAAAAAHAAQAAAACAAAAAAAHAAUAAAACAAAAAAAHAAYAAAACAAAAAAD5/wUAAAACAAAAAAD5/wYAAAACAAAAAAD6/wUAAAACAAAAAAD6/wYAAAACAAAAAAD7/wUAAAACAAAAAAD7/wYAAAACAAAAAAD8/wUAAAACAAAAAAD8/wYAAAACAAAAAAD9/wUAAAACAAAAAAD9/wYAAAACAAAAAAD+/wUAAAACAAAAAAD+/wYAAAACAAAAAAD//wUAAAACAAAAAAD//wYAAAACAAAAAAAAAAUAAAACAAAAAAAAAAYAAAACAAAAAAABAAUAAAACAAAAAAABAAYAAAACAAAAAAACAAUAAAACAAAAAAACAAYAAAACAAAAAAADAAUAAAACAAAAAAADAAYAAAACAAAAAAAEAAUAAAACAAAAAAAEAAYAAAACAAAAAAAFAAUAAAACAAAAAAAFAAYAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_3kunl")
 script = ExtResource("2_jiaie")
+
+[node name="LGrassLayer" type="TileMapLayer" parent="."]
+position = Vector2(-12.5, -12.5)
+tile_set = SubResource("TileSet_jiaie")
 
 [node name="MGrassLayer" type="TileMapLayer" parent="."]
 position = Vector2(-12.5, -12.5)
@@ -75,6 +133,3 @@ tile_set = SubResource("TileSet_3h7tx")
 [node name="HGrassLayer" type="TileMapLayer" parent="."]
 position = Vector2(-12.5, -12.5)
 tile_set = SubResource("TileSet_j3yku")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)

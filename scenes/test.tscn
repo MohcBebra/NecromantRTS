@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://cvnhdqa82ssi6"]
+[gd_scene load_steps=2 format=4 uid="uid://cvnhdqa82ssi6"]
+
+[ext_resource type="PackedScene" uid="uid://buo5etgbsq878" path="res://scenes/world_layer.tscn" id="1_errlg"]
 
 [node name="test" type="Node2D"]
+
+[node name="WorldLayer" parent="." instance=ExtResource("1_errlg")]
+tile_map_data = PackedByteArray("AAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAD+//7/AAABAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAD/////AAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAAAAP//AAACAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
