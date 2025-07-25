@@ -2,24 +2,30 @@ extends TileMapLayer
 
 @onready var visual_layers: Array[Node] = self.get_children()
 
-@onready var quarters_to_tile_source: Dictionary = {[0,1,0,0] : Vector2i(0,0),
-											[0,0,1,1] : Vector2i(1,0),
-											[1,1,0,1] : Vector2i(2,0),
-											[0,1,0,1] : Vector2i(3,0),
-											[1,0,0,1] : Vector2i(0,1),
-											[0,1,1,1] : Vector2i(1,1),
-											[1,1,1,1] : Vector2i(2,1),
-											[1,1,1,0] : Vector2i(3,1),
-											[0,0,1,0] : Vector2i(0,2),
-											[1,0,1,0] : Vector2i(1,2),
-											[1,0,1,1] : Vector2i(2,2),
-											[1,1,0,0] : Vector2i(3,2),
-											[0,0,0,1] : Vector2i(1,3),
-											[0,1,1,0] : Vector2i(2,3),
-											[1,0,0,0] : Vector2i(3,3),}
+@onready var quarters_to_tile_source: Dictionary[Array, Vector2i] = {[0,1,0,0] : Vector2i(0,0),
+												[0,0,1,1] : Vector2i(1,0),
+												[1,1,0,1] : Vector2i(2,0),
+												[0,1,0,1] : Vector2i(3,0),
+												[1,0,0,1] : Vector2i(0,1),
+												[0,1,1,1] : Vector2i(1,1),
+												[1,1,1,1] : Vector2i(2,1),
+												[1,1,1,0] : Vector2i(3,1),
+												[0,0,1,0] : Vector2i(0,2),
+												[1,0,1,0] : Vector2i(1,2),
+												[1,0,1,1] : Vector2i(2,2),
+												[1,1,0,0] : Vector2i(3,2),
+												[0,0,0,1] : Vector2i(1,3),
+												[0,1,1,0] : Vector2i(2,3),
+												[1,0,0,0] : Vector2i(3,3),}
 
 func _ready():
-	var l_grass_cells := self.get_used_cells_by_id(0, Vector2i(0,0), 0)
+	var world_tiles_data: Array[Array]
+	for i: int in len(visual_layers):
+		world_tiles_data.append([Vector2i(i,0), visual_layers[i]])
+	
+	
+	
+	"var l_grass_cells := self.get_used_cells_by_id(0, Vector2i(0,0), 0)
 	var m_grass_cells := self.get_used_cells_by_id(0, Vector2i(1,0), 0)
 	var h_grass_cells := self.get_used_cells_by_id(0, Vector2i(2,0), 0)
 	if l_grass_cells != []:
@@ -31,7 +37,7 @@ func _ready():
 	if h_grass_cells != []:
 		for cell_coord in h_grass_cells:
 			place_visual_tile(cell_coord, visual_layers[2], Vector2i(2,0))
-	self.clear()
+	self.clear()"
 
 func place_visual_tile(cell_coord: Vector2i, visual_layer: TileMapLayer, world_tile_atlas_coord: Vector2i):
 	for x: int in range(2):
